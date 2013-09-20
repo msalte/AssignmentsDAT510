@@ -23,7 +23,7 @@ namespace AssignmentsDAT510.Model
         {
             var inputBits = IdentifyInputBits(input, isEncrypt);
             var roundKeys = GenerateRoundKeys(key);
-
+            
             if (inputBits == null) return;
 
             var numBlocks = (int) Math.Ceiling((double) inputBits.Count/Block.Size);
@@ -35,9 +35,9 @@ namespace AssignmentsDAT510.Model
             {
                 var block = new Block(BitUtils.GetFirstBlock(inputBits));
 
-                block = PermuteBlock(block, DES.InitialPermutation);
-
                 inputBits = BitUtils.RemoveFrontMostBlock(inputBits);
+
+                block = PermuteBlock(block, DES.InitialPermutation);
 
                 try
                 {
@@ -95,7 +95,14 @@ namespace AssignmentsDAT510.Model
 
             if (isInputBinary)
             {
-                // TODO 
+                var bitSequence = new BitSequence(input.Length);
+
+                for (var i = 0; i < bitSequence.Count; i++)
+                {
+                    bitSequence.Set(i, input[i] == '1');
+                }
+
+                return bitSequence;
             }
 
             return new BitSequence(Encoding.UTF8.GetBytes(input));
@@ -104,7 +111,10 @@ namespace AssignmentsDAT510.Model
         private Block ExecuteRound(Block block, BitSequence roundKeyBits)
         {
             var nextLeft = block.RightSequence;
-            var nextRight = block.LeftSequence.XOR(ApplyRoundFunction(block.RightSequence, roundKeyBits));
+
+            var roundFunctionResult = ApplyRoundFunction(block.RightSequence, roundKeyBits);
+
+            var nextRight = block.LeftSequence.XOR(roundFunctionResult);
 
             var newBlock = new Block
             {
@@ -145,7 +155,7 @@ namespace AssignmentsDAT510.Model
         {
             var roundKeys = new List<BitSequence>();
 
-            var permutedKey = PermuteOriginalKey(key); // PC1
+            var permutedKey = PC1Key(key);
 
             var left = BitUtils.GetFirstHalf(permutedKey);
             var right = BitUtils.GetSecondHalf(permutedKey);
@@ -159,7 +169,7 @@ namespace AssignmentsDAT510.Model
                 // merge left and right sides into one
                 var shiftedKey = BitUtils.MergeBitSequences(new List<BitSequence> {left, right});
 
-                var roundKey = PermuteShiftedKey(shiftedKey); // PC2
+                var roundKey = PC2Key(shiftedKey);
 
                 roundKeys.Add(roundKey);
             }
@@ -167,7 +177,7 @@ namespace AssignmentsDAT510.Model
             return roundKeys;
         }
 
-        private static BitSequence PermuteShiftedKey(BitSequence shiftedKey)
+        private static BitSequence PC2Key(BitSequence shiftedKey)
         {
             var permutedKey = new BitSequence(DES.PermutedChoices2.Length);
 
@@ -187,7 +197,7 @@ namespace AssignmentsDAT510.Model
         /// </summary>
         /// <param name="key">The original key</param>
         /// <returns>The permuted key, represented by a BitArray object</returns>
-        private static BitSequence PermuteOriginalKey(string key)
+        private static BitSequence PC1Key(string key)
         {
             var originalKey = new BitSequence(Encoding.UTF8.GetBytes(key));
 

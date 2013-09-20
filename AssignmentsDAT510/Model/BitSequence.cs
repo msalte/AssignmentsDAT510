@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Globalization;
+using System.Linq;
 using System.Text;
 using AssignmentsDAT510.Util;
 
@@ -29,18 +31,6 @@ namespace AssignmentsDAT510.Model
         public BitSequence(byte[] values)
         {
             _bits = new BitArray(values);
-        }
-
-        public BitArray Bits
-        {
-            get
-            {
-                return _bits;
-            }
-            set
-            {
-                _bits = value;
-            }
         }
 
         public int Count
@@ -91,34 +81,15 @@ namespace AssignmentsDAT510.Model
             {
                 var bytes = new byte[Count/BitUtils.ByteSize];
 
-                if(_bits != null) _bits.CopyTo(bytes,0);
+                if (_bits != null) _bits.CopyTo(bytes, 0);
 
                 return BitConverter.ToString(bytes);
             }
         }
 
-        /// <summary>
-        /// The bit sequence represented as an integer.
-        /// Will be -1 if out of range of Int32.
-        /// </summary>
         public int AsInteger
         {
-            get
-            {
-                try
-                {
-                    var integerArray = new int[1];
-
-                    _bits.CopyTo(integerArray, 0);
-
-                    return integerArray[0];
-                }
-                catch (ArgumentException)
-                {
-                    return -1;
-                }
-
-            }
+            get { return Convert.ToInt32(AsBinaryString, 2); }
         }
 
         public bool Get(int index)
@@ -130,6 +101,5 @@ namespace AssignmentsDAT510.Model
         {
             _bits.Set(index, value);
         }
-
     }
 }

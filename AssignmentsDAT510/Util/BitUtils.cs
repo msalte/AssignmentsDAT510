@@ -61,7 +61,7 @@ namespace AssignmentsDAT510.Util
 
         public static BitSequence IntegerToBitSequence(int value, int padding)
         {
-            var s = Convert.ToString(value, 2).PadLeft(padding);
+            var s = Convert.ToString(value, 2).PadLeft(padding, '0');
 
             var result = new BitSequence(s.Length);
 
@@ -192,17 +192,37 @@ namespace AssignmentsDAT510.Util
 
         public static BitSequence GetFirstBlock(BitSequence bitSequence)
         {
+
             var blockBits = new BitSequence(Block.Size);
 
-            for (var i = (Block.Size - 1); i >= 0; i--)
+            var sequenceLength = bitSequence.Count;
+
+            var isPaddingRequired = sequenceLength < Block.Size;
+
+            var j = 0;
+
+            if (isPaddingRequired)
             {
-                try
+                var startIndex = Block.Size - sequenceLength;
+
+                for (var i = 0; i < Block.Size; i++)
+                {
+                    if (i < startIndex)
+                    {
+                        blockBits.Set(i, false);
+                    }
+                    else
+                    {
+                        blockBits.Set(i, bitSequence.Get(j));
+                        j++;
+                    }
+                }
+            }
+            else
+            {
+                for (var i = 0; i < Block.Size; i++)
                 {
                     blockBits.Set(i, bitSequence.Get(i));
-                }
-                catch (ArgumentOutOfRangeException)
-                {
-                    blockBits.Set(i, false);
                 }
             }
 
