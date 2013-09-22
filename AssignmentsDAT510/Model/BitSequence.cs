@@ -11,7 +11,7 @@ namespace AssignmentsDAT510.Model
     /// This class i basically a BitArray but it has some additional 
     /// properties that is very helpful while making sure everything
     /// is working as intended during debugging. Such properties 
-    /// include string and hexadecimal representation of the bit
+    /// include a string representation of the bit
     /// sequence.
     /// </summary>
     public class BitSequence
@@ -28,9 +28,53 @@ namespace AssignmentsDAT510.Model
             _bits = new BitArray(values);
         }
 
-        public BitSequence(byte[] values)
+        public BitSequence(string input)
         {
-            _bits = new BitArray(values);
+            var isInputBinary = !input.Any(bit => bit != '1' && bit != '0');
+
+            if (isInputBinary)
+            {
+                CreateFromBinaryInput(input);
+            }
+            else
+            {
+                CreateFromTextInput(input);
+            }
+
+        }
+
+        private void CreateFromBinaryInput(string binaryInput)
+        {
+            _bits = new BitArray(binaryInput.Length);
+
+            for (var i = 0; i < binaryInput.Length; i++)
+            {
+                _bits.Set(i, binaryInput[i] == '1');
+            }
+        }
+
+        private void CreateFromTextInput(string textInput)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var c in textInput)
+            {
+                var bytes = Encoding.UTF8.GetBytes(c.ToString(CultureInfo.InvariantCulture));
+
+                foreach (var b in bytes)
+                {
+                    sb.Append(Convert.ToString(b, 2).PadLeft(BitUtils.ByteSize, '0'));
+                }
+            }
+
+            var binaryString = sb.ToString();
+
+            _bits = new BitArray(binaryString.Length);
+
+            for (var i = 0; i < binaryString.Length; i++)
+            {
+                _bits.Set(i, binaryString[i] == '1');
+            }
         }
 
         public int Count
@@ -67,23 +111,26 @@ namespace AssignmentsDAT510.Model
         {
             get
             {
-                var bytes = new byte[Count/BitUtils.ByteSize];
+                var sb = new StringBuilder();
 
-                if (_bits != null) _bits.CopyTo(bytes, 0);
+                var binary = AsBinaryString;
 
-                return Encoding.UTF8.GetString(bytes);
-            }
-        }
+                for (var i = 0; i < binary.Length; i += BitUtils.ByteSize)
+                {
+                    var byteString = binary.Substring(i, BitUtils.ByteSize);
 
-        public string AsHexString
-        {
-            get
-            {
-                var bytes = new byte[Count/BitUtils.ByteSize];
+                    if (!byteString.Equals("00000000"))
+                    {
+                        var digit = Byte.Parse(Convert.ToInt32(byteString, 2).ToString(CultureInfo.InvariantCulture));
 
-                if (_bits != null) _bits.CopyTo(bytes, 0);
+                        var letter = Encoding.UTF8.GetString(new [] {digit});
 
-                return BitConverter.ToString(bytes);
+                        sb.Append(letter);
+
+                    }
+                }
+
+                return sb.ToString();
             }
         }
 

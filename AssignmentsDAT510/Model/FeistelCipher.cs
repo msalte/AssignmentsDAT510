@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using AssignmentsDAT510.Interface;
 using AssignmentsDAT510.Util;
 
@@ -21,7 +20,7 @@ namespace AssignmentsDAT510.Model
 
         public void Execute(string input, string key, bool isEncrypt)
         {
-            var inputBits = IdentifyInputBits(input, isEncrypt);
+            var inputBits = GenerateInputBits(input, isEncrypt);
             var roundKeys = GenerateRoundKeys(key);
             
             if (inputBits == null) return;
@@ -34,6 +33,8 @@ namespace AssignmentsDAT510.Model
             for (var i = 0; i < numBlocks; i++)
             {
                 var block = new Block(BitUtils.GetFirstBlock(inputBits));
+
+                block.Divide();
 
                 inputBits = BitUtils.RemoveFrontMostBlock(inputBits);
 
@@ -77,35 +78,18 @@ namespace AssignmentsDAT510.Model
             _progressCallback.OnComplete(result);
         }
 
-        private BitSequence IdentifyInputBits(string input, bool isEncrypt)
+        private BitSequence GenerateInputBits(string input, bool isEncrypt)
         {
             var isInputBinary = !input.Any(bit => bit != '1' && bit != '0');
 
-            if (!isEncrypt)
+            if (!isEncrypt && !isInputBinary)
             {
-                if (isInputBinary)
-                {
-                    return BitUtils.BinaryStringToBitSequence(input);
-                }
-
                 _progressCallback.OnError("You are trying to decrypt non binary data!");
 
                 return null;
             }
 
-            if (isInputBinary)
-            {
-                var bitSequence = new BitSequence(input.Length);
-
-                for (var i = 0; i < bitSequence.Count; i++)
-                {
-                    bitSequence.Set(i, input[i] == '1');
-                }
-
-                return bitSequence;
-            }
-
-            return new BitSequence(Encoding.UTF8.GetBytes(input));
+            return new BitSequence(input);
         }
 
         private Block ExecuteRound(Block block, BitSequence roundKeyBits)
@@ -199,7 +183,7 @@ namespace AssignmentsDAT510.Model
         /// <returns>The permuted key, represented by a BitArray object</returns>
         private static BitSequence PC1Key(string key)
         {
-            var originalKey = new BitSequence(Encoding.UTF8.GetBytes(key));
+            var originalKey = new BitSequence(key);
 
             var permutedKey = new BitSequence(56);
 

@@ -116,7 +116,7 @@ namespace AssignmentsDAT510.Util
             const int startIndex = 0;
             var endIndex = bitSequence.Count/2 - 1;
 
-            for (var i = startIndex; i < endIndex; i++)
+            for (var i = startIndex; i <= endIndex; i++)
             {
                 result.Set(i, bitSequence.Get(i));
             }
@@ -144,7 +144,7 @@ namespace AssignmentsDAT510.Util
             var endIndex = bitSequence.Count - 1;
 
             var j = 0;
-            for (var i = startIndex; i < endIndex; i++)
+            for (var i = startIndex; i <= endIndex; i++)
             {
                 result.Set(j, bitSequence.Get(i));
                 j++;

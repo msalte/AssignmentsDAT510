@@ -50,11 +50,6 @@ namespace AssignmentsDAT510.Model
 
         public override string ToString()
         {
-            if (LeftSequence == null || RightSequence == null)
-            {
-                Divide();
-            }
-
             if (LeftSequence != null && RightSequence != null)
             {
                 return "LEFT: " + LeftSequence.AsTextString + " | RIGHT: " +
