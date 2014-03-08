@@ -1,1 +1,3 @@
-This repository contains the implementations of Assignments 1, 2 and 3 of course DAT510 at the University of Stavanger (fall 2013)
+* This repository contains the implementations of Assignments 1, 2 and 3 of course DAT510 at the University of Stavanger (fall 2013)
+ * The code is written in C# and the project should be easily imported into Visual Studio
+ * Please note that the assignment 3 impl. is single threaded per request, as the grading procedure could not handle the async functionality present in assignment 1 and 2 very well
