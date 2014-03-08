@@ -1,0 +1,1 @@
+This repository contains the implementations of Assignments 1, 2 and 3 of course DAT510 at the University of Stavanger (fall 2013)
