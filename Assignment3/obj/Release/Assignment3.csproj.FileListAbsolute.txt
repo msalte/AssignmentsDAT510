@@ -1,0 +1,17 @@
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\bin\Release\Assignment3.exe.config
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\bin\Release\Assignment3.exe
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\bin\Release\Assignment3.pdb
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\Assignment3.csprojResolveAssemblyReference.cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\EditMessageWindow.baml
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\MainWindow.baml
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\VerificationWindow.baml
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\EditMessageWindow.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\MainWindow.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\VerificationWindow.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\App.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\Assignment3_MarkupCompile.cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\Assignment3.g.resources
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\Assignment3.Properties.Resources.resources
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\Assignment3.csproj.GenerateResource.Cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\Assignment3.exe
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment3\obj\Release\Assignment3.pdb

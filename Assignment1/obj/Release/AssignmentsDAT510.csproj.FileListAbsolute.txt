@@ -1,0 +1,17 @@
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\bin\Release\AssignmentsDAT510.exe.config
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\bin\Release\AssignmentsDAT510.exe
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\bin\Release\AssignmentsDAT510.pdb
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\AssignmentsDAT510.csprojResolveAssemblyReference.cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\LogWindow.baml
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\MainWindow.baml
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\UseGuideWindow.baml
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\LogWindow.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\MainWindow.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\UseGuideWindow.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\App.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\AssignmentsDAT510_MarkupCompile.cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\AssignmentsDAT510.g.resources
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\AssignmentsDAT510.Properties.Resources.resources
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\AssignmentsDAT510.csproj.GenerateResource.Cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\AssignmentsDAT510.exe
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\AssignmentsDAT510\obj\Release\AssignmentsDAT510.pdb

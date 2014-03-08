@@ -1,0 +1,25 @@
+﻿<Window x:Class="Assignment3.VerificationWindow" Name="Verify"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Message Verification" Height="150" Width="500">
+    <Grid Margin="10">
+        <Border BorderBrush="LightSlateGray" BorderThickness="1" CornerRadius="7"
+                Background="{Binding ElementName=Verify, Path=VerificationMessageColor}" Padding="15">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image VerticalAlignment="Center" Grid.Column="0"
+                       Source="{Binding ElementName=Verify, Path=VerificationIcon}"
+                       HorizontalAlignment="Right" />
+                <TextBlock VerticalAlignment="Center" Grid.Column="1"
+                           Text="{Binding ElementName=Verify, Path=VerificationMessage}"
+                           HorizontalAlignment="Left" />
+
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

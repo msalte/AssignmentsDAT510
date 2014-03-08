@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentsDAT510", "AssignmentsDAT510\AssignmentsDAT510.csproj", "{52313E65-DAC0-4383-8323-9B1960E88461}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment1", "Assignment1\Assignment1.csproj", "{52313E65-DAC0-4383-8323-9B1960E88461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment2", "Assignment2\Assignment2.csproj", "{5BCF52DB-82E9-49E5-A7D7-4A86AFFBBAF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment3", "Assignment3\Assignment3.csproj", "{739DA219-4716-40F2-8EA9-360061956950}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,14 @@ Global
 		{52313E65-DAC0-4383-8323-9B1960E88461}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52313E65-DAC0-4383-8323-9B1960E88461}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52313E65-DAC0-4383-8323-9B1960E88461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCF52DB-82E9-49E5-A7D7-4A86AFFBBAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCF52DB-82E9-49E5-A7D7-4A86AFFBBAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCF52DB-82E9-49E5-A7D7-4A86AFFBBAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCF52DB-82E9-49E5-A7D7-4A86AFFBBAF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{739DA219-4716-40F2-8EA9-360061956950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739DA219-4716-40F2-8EA9-360061956950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739DA219-4716-40F2-8EA9-360061956950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739DA219-4716-40F2-8EA9-360061956950}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

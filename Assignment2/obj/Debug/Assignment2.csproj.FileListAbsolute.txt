@@ -1,0 +1,13 @@
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\bin\Debug\Assignment2.exe.config
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\bin\Debug\Assignment2.exe
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\bin\Debug\Assignment2.pdb
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\Assignment2.csprojResolveAssemblyReference.cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\MainWindow.baml
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\MainWindow.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\App.g.cs
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\Assignment2_MarkupCompile.cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\Assignment2.g.resources
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\Assignment2.Properties.Resources.resources
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\Assignment2.csproj.GenerateResource.Cache
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\Assignment2.exe
+C:\Users\Morten\Documents\Visual Studio 2012\Projects\AssignmentsDAT510\Assignment2\obj\Debug\Assignment2.pdb
